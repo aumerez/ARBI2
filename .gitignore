@@ -70,3 +70,6 @@ backend/uv.lock
 
 # local dev db
 backend/*.db
+
+# instructor planning/control files (never ship to students)
+.planning/
