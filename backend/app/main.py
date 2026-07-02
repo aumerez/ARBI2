@@ -5,6 +5,7 @@ from fastapi import FastAPI
 from app.config import get_settings
 from app.database import Base, engine
 from app.database import models  # noqa: F401 — register models on Base
+from app.shared import register_exception_handlers
 
 settings = get_settings()
 
@@ -23,6 +24,8 @@ app = FastAPI(
     version="0.1.0",
     lifespan=lifespan,
 )
+
+register_exception_handlers(app)
 
 
 @app.get("/health")
