@@ -67,3 +67,6 @@ backend/.venv/
 __pycache__/
 *.pyc
 backend/uv.lock
+
+# local dev db
+backend/*.db
